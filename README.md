@@ -1,58 +1,71 @@
-# Driveaway Auto Finance: website, admin and CRM
+# Driveaway Auto Finance — website, CRM and admin
 
-Single-file website for Driveaway Auto Finance, a used-car dealership at 2333 W 37th Ave, Hobart, IN 46342 (219-945-3136).
+Dynamic site for a used-car dealership (Hobart, IN). One small Node server provides
+the public site, per-vehicle SEO pages, a lead form, an admin panel, a sales CRM,
+users with roles, an audit log and backups.
 
-## What is inside `index.html`
-- **Public site** (hash-routed pages): Home, Inventory, Financing, Sell or trade, Car finder, Visit us, Reviews, Privacy, Terms. Mega menu, hero slider, route timeline and bento grid, vehicle compare tray (up to 3), payment calculator.
-- **Staff sign-in** (`#login`) and **Admin** (`#admin`): Dashboard, Vehicles (add/edit/photos/mark sold), Sales, Leads inbox, **CRM**, Reports.
-- **CRM** (`#admin-crm`): Kanban board with 11 stages, customer file (deal money, payments, tasks, notes and activity log, documents checklist), sales team assignment, task list, insights and CSV export.
+- **Runtime:** Node 22.5+ (uses built-in `node:sqlite`, `node:http`, `node:crypto`). No required dependencies.
+- **Database:** PostgreSQL when `DATABASE_URL` is set (Replit's built-in DB), otherwise a local SQLite file for development.
+- **Optional packages:** `pg` (Postgres driver, installed by `npm install`), `sharp` (resizes uploaded photos to WebP).
 
-## Project structure
+## Run locally
+
+```bash
+OWNER_EMAIL=you@example.com OWNER_PASSWORD='a-long-passphrase-12+' npm start
+# http://localhost:3000   admin: http://localhost:3000/login/
+npm test        # 77 API/security checks on a temporary database
 ```
-tools/build_static.py   pre-renders crawlable pages into docs/
-site.config.json      base_url, out_dir, custom_domain
-data/                 vehicles.json and photos/ exported from the admin (optional)
-docs/                 generated static site (publish this folder)
-index.html            built single file (identical to the published artifact)
-build.py              python3 build.py  -> inlines src/ into index.html
-src/index.html        page markup (all pages + admin + dialogs)
-src/styles.css        all styles
-src/app.js            all logic: routing, inventory, compare, finder, admin, CRM
-src/assets/img/       logo, 4 hero slider images, 22 vehicle photos (named by stock number)
-originals/            the original files you uploaded (photos and the source site content)
+
+## Deploy on Replit
+
+1. Replit → **Create App → Import from GitHub** → `AbdallahBatah/driveaway-auto-finance`.
+2. **Tools → PostgreSQL** (creates the database and sets `DATABASE_URL` automatically).
+3. **Secrets** (padlock icon) — add:
+
+| Secret | Required | Purpose |
+|---|---|---|
+| `SITE_URL` | yes | Public address, e.g. `https://www.driveawayautofinance.com` (canonical URLs, sitemap, CSRF origin) |
+| `OWNER_EMAIL`, `OWNER_PASSWORD` | first run | Creates the first owner account (password 12+ characters). Delete `OWNER_PASSWORD` after first login. |
+| `RESEND_API_KEY`, `NOTIFY_EMAIL`, `MAIL_FROM` | recommended | Email alert for each new lead (Resend). Without them, leads are only logged. |
+| `TURNSTILE_SITE_KEY`, `TURNSTILE_SECRET` | recommended | Cloudflare Turnstile on forms. Honeypot + time trap + rate limit work without it. |
+| `SESSION_HOURS`, `BACKUP_KEEP`, `SEED_VEHICLES`, `TRUST_PROXY` | optional | Defaults: 8, 30, on, on behind Replit |
+
+4. Press **Run**, then **Deploy** (Autoscale/Cloud Run is preconfigured in `.replit`). Attach your domain under Deployments → Settings.
+5. Open `/login/`, sign in as the owner, change nothing yet — first create your Manager/Sales users under **Users**.
+
+On first start the 37 current vehicles are seeded automatically.
+
+## Roles
+
+| Role | Can do |
+|---|---|
+| owner | Everything, including Users, Activity log, Backups |
+| manager | Vehicles, sales/CRM, leads, reports |
+| sales | Only their own deals in the CRM (enforced on the server) |
+
+## Data and backups
+
+- Inventory, deals and leads are documents in one `docs` table; photos are stored in `blobs`.
+- Daily automatic backup (keeps the last 30) plus manual and *full* (with photos) backups; download them and keep a copy off-site. Restore requires typing `RESTORE` and takes a safety snapshot first.
+- Migrating old data: put `vehicles.json`, `deals.json`, `leads.json` in `data/migration/` and run `npm run import`.
+- Create or reset an owner from the shell: `npm run create-owner`.
+
+## Project layout
+
 ```
-Edit files in `src/`, run `python3 build.py`, and publish the resulting `index.html`.
-To preview `src/` directly: `cd src && python3 -m http.server` (admin and CRM still need the claude.ai runtime).
-
-## SEO: static pages, metadata and sitemap
-Search engines cannot index the `#` routes of the single-file site (or a private artifact), so the repo includes a generator that pre-renders real, crawlable pages:
-
+server/   http server, auth, store, backup, mail, SEO/page rendering
+src/      front-end (index.html, app.js, shim.js, admin-extra.js, styles.css, assets/)
+data/     seed vehicles
+scripts/  create-owner, import-data
+tests/    api.test.js
+build.py  builds the single-file preview (index.html) used as a Claude artifact
 ```
-pip install playwright && playwright install chromium
-python3 tools/build_static.py        # writes docs/
-```
-Output in `docs/` (publish with GitHub Pages: Settings > Pages > Deploy from branch > `main` / `docs`):
-- `/`, `/inventory/`, `/financing/`, `/sell/`, `/finder/`, `/visit/`, `/reviews/`, `/privacy/`, `/terms/`
-- `/cars/<year-make-model-trim-stock>/`: one page per vehicle with its own URL
-- `sitemap.xml` (with vehicle images), `robots.txt`, `404.html`
-- `llms.txt` (short guide to the business and every vehicle for AI assistants) and `llms-full.txt` (full inventory details)
 
-Each page has a unique title and description, canonical URL, Open Graph and Twitter tags, and JSON-LD: `AutoDealer` and `WebSite` on every page, `BreadcrumbList` everywhere, `Car` with `Offer` on vehicle pages and `ItemList` on the inventory page.
+After editing `src/`, run `python3 build.py` only if you also want to refresh the single-file preview.
 
-**Before going live:** set `base_url` in `site.config.json` to the real address (and `custom_domain` if you use one), then rebuild. Canonical URLs, sitemap and structured data all follow it.
+## Honest caveats
 
-**When inventory changes:** in Admin > Vehicles click *Export site data (JSON)*, save the file as `data/vehicles.json`, put each new car's photo in `data/photos/<stock>.webp` (or .jpg/.png), run `python3 tools/build_static.py` and push. Cars that were sold drop out of the sitemap on the next build.
-
-## Important: how it runs
-The admin, live inventory, lead capture and CRM use the `window.claude` runtime of claude.ai artifacts (`db`, `user`, `assets`, `sample`, `downloads`). Opened elsewhere (for example GitHub Pages) the public pages work with the 37 built-in vehicles, but admin, CRM and saving of leads do not.
-
-Collections and access rules used when published as an artifact:
-- `vehicles` read: view, write: admin
-- `leads` read/write: admin; `leads/{self}` read/write: interact
-- `deals` and `settings` read/write: admin
-
-To self-host, replace the `claude.use(...)` calls with your own backend (auth plus a database for vehicles, leads, deals and settings).
-
-## Notes
-- Fonts: Cormorant Garamond and Jost (Google Fonts). Images are embedded as base64.
-- Confirm you have rights to the slider photos before going live.
+- The Postgres driver was verified against a test double, not a live Postgres. Do a smoke test (login, add vehicle, submit lead, backup) right after the first Replit deploy.
+- Rate limiting is in memory, so it is per instance; with several instances it is looser. Turnstile covers the lead form.
+- Page content is rendered in the browser on top of server-rendered titles, meta, JSON-LD and (on car pages) a full text block, so Google sees the key content.
+- See `SECURITY.md` before going live.

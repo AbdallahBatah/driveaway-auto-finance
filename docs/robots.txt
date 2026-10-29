@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://abdallahbatah.github.io/driveaway-auto-finance/sitemap.xml

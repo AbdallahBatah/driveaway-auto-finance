@@ -1,2 +1,6 @@
 .build/
 __pycache__/
+node_modules/
+data/*.sqlite*
+data/migration/
+.env

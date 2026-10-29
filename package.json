@@ -1,0 +1,20 @@
+{
+  "name": "driveaway-auto-finance",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Driveaway Auto Finance: website, admin, CRM, users and database",
+  "main": "server/index.js",
+  "engines": { "node": ">=22.5" },
+  "scripts": {
+    "start": "node --no-warnings server/index.js",
+    "test": "node --no-warnings tests/api.test.js",
+    "import": "node --no-warnings scripts/import-data.js",
+    "create-owner": "node --no-warnings scripts/create-owner.js"
+  },
+  "dependencies": {
+    "pg": "^8.13.1"
+  },
+  "optionalDependencies": {
+    "sharp": "^0.33.5"
+  }
+}
