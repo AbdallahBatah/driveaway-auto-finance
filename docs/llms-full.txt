@@ -1,0 +1,381 @@
+# Driveaway Auto Finance
+
+> Driveaway Auto Finance is an independent used-car dealership with in-house financing at 2333 W 37th Ave, Hobart, IN 46342 (Lake County, northwest Indiana). Phone 219-945-3136. It sells used sedans, SUVs, trucks and minivans, buys and takes trade-ins on vehicles, and helps customers with limited or damaged credit find financing. Prices exclude taxes and fees and may change without notice; approval and terms depend on the customer's income, credit and the vehicle.
+
+Last updated: 2026-10-29
+
+## Contact
+
+Driveaway Auto Finance, 2333 W 37th Ave, Hobart, IN 46342. Phone 219-945-3136. Map: https://www.google.com/maps/place/Driveaway+Auto+Finance/data=!4m2!3m1!1s0x0:0x4d325bdfe1317fba
+
+## Inventory
+
+### 2020 Chevrolet Colorado 4WD Crew Cab Work Truck
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2020-chevrolet-colorado-4wd-crew-cab-work-truck-10016/
+- Price: $19,995
+- Mileage: 106,885 miles
+- Body style: Truck
+- Exterior color: White
+- Stock number: 10016
+- Condition: Used
+
+### 2021 Chevrolet Malibu LT
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2021-chevrolet-malibu-lt-10274/
+- Price: $15,995
+- Mileage: 66,881 miles
+- Body style: Sedan
+- Exterior color: Black
+- Stock number: 10274
+- Condition: Used
+
+### 2023 Chevrolet Malibu 2LT
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2023-chevrolet-malibu-2lt-10393/
+- Price: $18,995
+- Mileage: 94,807 miles
+- Body style: Sedan
+- Exterior color: Silver
+- Stock number: 10393
+- Condition: Used
+
+### 2023 Chevrolet Malibu 1LT
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2023-chevrolet-malibu-1lt-10004/
+- Price: $13,995
+- Mileage: 104,836 miles
+- Body style: Sedan
+- Exterior color: Blue
+- Stock number: 10004
+- Condition: Used
+
+### 2019 Chevrolet Silverado 1500 LT Crew Cab 4WD
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2019-chevrolet-silverado-1500-lt-crew-cab-4wd-10337/
+- Price: $19,995
+- Mileage: 167,240 miles
+- Body style: Truck
+- Exterior color: Blue
+- Stock number: 10337
+- Condition: Used
+
+### 2019 Dodge Journey SE AWD
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2019-dodge-journey-se-awd-10347/
+- Price: $11,995
+- Mileage: 84,936 miles
+- Body style: SUV
+- Exterior color: White
+- Stock number: 10347
+- Condition: Used
+
+### 2022 Ford Edge SEL AWD
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2022-ford-edge-sel-awd-10351/
+- Price: $17,995
+- Mileage: 94,663 miles
+- Body style: SUV
+- Exterior color: Silver
+- Stock number: 10351
+- Condition: Used
+
+### 2020 Ford Escape SE
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2020-ford-escape-se-10395/
+- Price: $13,995
+- Mileage: 46,667 miles
+- Body style: SUV
+- Exterior color: Gray
+- Stock number: 10395
+- Condition: Used
+
+### 2022 Ford Escape SE Hybrid
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2022-ford-escape-se-hybrid-10373/
+- Price: $13,995
+- Mileage: 112,352 miles
+- Body style: SUV
+- Exterior color: Gray
+- Stock number: 10373
+- Condition: Used
+
+### 2022 Ford Explorer Limited 4WD
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2022-ford-explorer-limited-4wd-10282/
+- Price: $30,995
+- Mileage: 21,560 miles
+- Body style: SUV
+- Exterior color: Black
+- Stock number: 10282
+- Condition: Used
+
+### 2020 Ford Fusion SE
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2020-ford-fusion-se-10014/
+- Price: $14,995
+- Mileage: 52,071 miles
+- Body style: Sedan
+- Exterior color: Black
+- Stock number: 10014
+- Condition: Used
+
+### 2019 Ford Fusion Hybrid SE
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2019-ford-fusion-hybrid-se-10349/
+- Price: $13,995
+- Mileage: 36,031 miles
+- Body style: Sedan
+- Exterior color: Blue
+- Stock number: 10349
+- Condition: Used
+
+### 2024 Ford Edge SEL AWD
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2024-ford-edge-sel-awd-10147/
+- Price: $23,995
+- Mileage: 54,041 miles
+- Body style: SUV
+- Exterior color: Black
+- Stock number: 10147
+- Condition: Used
+
+### 2019 Hyundai Elantra SEL
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2019-hyundai-elantra-sel-10023/
+- Price: $11,995
+- Mileage: 88,407 miles
+- Body style: Sedan
+- Exterior color: Black
+- Stock number: 10023
+- Condition: Used
+
+### 2024 Hyundai Elantra Limited
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2024-hyundai-elantra-limited-10297/
+- Price: $20,995
+- Mileage: 58,611 miles
+- Body style: Sedan
+- Exterior color: Gray
+- Stock number: 10297
+- Condition: Used
+
+### 2015 Hyundai Genesis V6 3.8L AWD
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2015-hyundai-genesis-v6-3-8l-awd-10174/
+- Price: $12,995
+- Mileage: 90,604 miles
+- Body style: Sedan
+- Exterior color: Blue
+- Stock number: 10174
+- Condition: Used
+
+### 2011 Hyundai Sonata GLS
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2011-hyundai-sonata-gls-10322/
+- Price: $6,995
+- Mileage: 109,261 miles
+- Body style: Sedan
+- Exterior color: Gray
+- Stock number: 10322
+- Condition: Used
+
+### 2020 Hyundai Sonata SEL 2.5L
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2020-hyundai-sonata-sel-2-5l-10156/
+- Price: $16,995
+- Mileage: 70,764 miles
+- Body style: Sedan
+- Exterior color: Black
+- Stock number: 10156
+- Condition: Used
+
+### 2021 Hyundai Sonata SEL 2.5L
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2021-hyundai-sonata-sel-2-5l-10350/
+- Price: $13,995
+- Mileage: 97,255 miles
+- Body style: Sedan
+- Exterior color: White
+- Stock number: 10350
+- Condition: Used
+
+### 2021 Hyundai Tucson Ultimate AWD
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2021-hyundai-tucson-ultimate-awd-10280/
+- Price: $19,995
+- Mileage: 67,027 miles
+- Body style: SUV
+- Exterior color: Gray
+- Stock number: 10280
+- Condition: Used
+
+### 2020 Chrysler Pacifica Touring L
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2020-chrysler-pacifica-touring-l-10418/
+- Price: Call for price
+- Mileage: 109,201 miles
+- Body style: Van-Minivan
+- Exterior color: White
+- Stock number: 10418
+- Condition: Used
+
+### 2020 Dodge Durango GT AWD
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2020-dodge-durango-gt-awd-10415/
+- Price: Call for price
+- Mileage: 94,457 miles
+- Body style: SUV
+- Exterior color: Gray
+- Stock number: 10415
+- Condition: Used
+
+### 2019 Chevrolet Impala Premier
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2019-chevrolet-impala-premier-10420/
+- Price: Call for price
+- Mileage: 113,263 miles
+- Body style: Sedan
+- Exterior color: Black
+- Stock number: 10420
+- Condition: Used
+
+### 2024 Chevrolet Malibu 1LT
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2024-chevrolet-malibu-1lt-10413/
+- Price: Call for price
+- Mileage: 51,460 miles
+- Body style: Sedan
+- Exterior color: Red
+- Stock number: 10413
+- Condition: Used
+
+### 2018 Ford Explorer AWD
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2018-ford-explorer-awd-10386/
+- Price: Call for price
+- Mileage: 113,235 miles
+- Body style: SUV
+- Exterior color: Black
+- Stock number: 10386
+- Condition: Used
+
+### 2019 Jeep Compass High Altitude 4x4
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2019-jeep-compass-high-altitude-4x4-10263/
+- Price: $18,995
+- Mileage: 53,322 miles
+- Body style: SUV
+- Exterior color: Silver
+- Drive: 4WD
+- Transmission: Automatic
+- Engine: 2.4L
+- Stock number: 10263
+- Condition: Used
+
+### 2021 Jeep Compass 80th Anniversary 4x4
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2021-jeep-compass-80th-anniversary-4x4-10249/
+- Price: $13,995
+- Mileage: 99,573 miles
+- Body style: SUV
+- Exterior color: White
+- Drive: 4WD
+- Transmission: Automatic
+- Engine: 2.4L
+- Stock number: 10249
+- Condition: Used
+
+### 2021 Jeep Compass Sport 4x4
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2021-jeep-compass-sport-4x4-10417/
+- Price: Call for price
+- Mileage: 74,067 miles
+- Body style: SUV
+- Exterior color: Silver
+- Drive: 4WD
+- Transmission: Automatic
+- Engine: 2.4L
+- Stock number: 10417
+- Condition: Used
+
+### 2022 Jeep Compass Latitude 4x4
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2022-jeep-compass-latitude-4x4-10339/
+- Price: $17,995
+- Mileage: 65,028 miles
+- Body style: SUV
+- Exterior color: Silver
+- Drive: 4WD
+- Transmission: Automatic
+- Engine: 2.4L
+- Stock number: 10339
+- Condition: Used
+
+### 2023 Jeep Compass Limited 4x4
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2023-jeep-compass-limited-4x4-10326/
+- Price: $24,995
+- Mileage: 37,876 miles
+- Body style: SUV
+- Exterior color: Silver
+- Drive: 4WD
+- Transmission: Automatic
+- Engine: 2.0L
+- Stock number: 10326
+- Condition: Used
+
+### 2018 Jeep Grand Cherokee Altitude 4x4
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2018-jeep-grand-cherokee-altitude-4x4-10398/
+- Price: $13,995
+- Mileage: 93,757 miles
+- Body style: SUV
+- Exterior color: Gray
+- Drive: 4WD
+- Transmission: Automatic
+- Engine: 3.6L
+- Stock number: 10398
+- Condition: Used
+
+### 2023 Jeep Grand Cherokee Limited 4x4
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2023-jeep-grand-cherokee-limited-4x4-10389/
+- Price: $28,995
+- Mileage: 48,964 miles
+- Body style: SUV
+- Exterior color: Black
+- Drive: 4WD
+- Transmission: Automatic
+- Engine: 3.6L
+- Stock number: 10389
+- Condition: Used
+
+### 2023 Jeep Grand Cherokee L Laredo 4x4
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2023-jeep-grand-cherokee-l-laredo-4x4-10405/
+- Price: Call for price
+- Mileage: 78,421 miles
+- Body style: SUV
+- Exterior color: White
+- Drive: 4WD
+- Transmission: Automatic
+- Engine: 3.6L
+- Stock number: 10405
+- Condition: Used
+
+### 2021 Jeep Renegade Jeepster 4x4
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2021-jeep-renegade-jeepster-4x4-10401/
+- Price: $11,995
+- Mileage: 96,403 miles
+- Body style: SUV
+- Exterior color: Black
+- Drive: 4WD
+- Transmission: Automatic
+- Engine: 2.4L
+- Stock number: 10401
+- Condition: Used
+
+### 2019 Kia Optima LX Auto
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2019-kia-optima-lx-auto-10348/
+- Price: $9,995
+- Mileage: 90,758 miles
+- Body style: Sedan
+- Exterior color: Gray
+- Drive: FWD
+- Transmission: Automatic
+- Engine: 2.4L
+- Stock number: 10348
+- Condition: Used
+
+### 2014 Kia Sorento 2WD 4dr V6 LX
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2014-kia-sorento-2wd-4dr-v6-lx-10421/
+- Price: Call for price
+- Mileage: 99,970 miles
+- Body style: SUV
+- Exterior color: Silver
+- Drive: FWD
+- Transmission: Automatic
+- Engine: 3.3L
+- Stock number: 10421
+- Condition: Used
+
+### 2019 Kia Sorento LX AWD
+- URL: https://abdallahbatah.github.io/driveaway-auto-finance/cars/2019-kia-sorento-lx-awd-10414/
+- Price: Call for price
+- Mileage: 105,086 miles
+- Body style: SUV
+- Exterior color: White
+- Drive: AWD
+- Transmission: Automatic
+- Engine: 2.4L
+- Stock number: 10414
+- Condition: Used
+

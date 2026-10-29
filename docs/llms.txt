@@ -1,0 +1,59 @@
+# Driveaway Auto Finance
+
+> Driveaway Auto Finance is an independent used-car dealership with in-house financing at 2333 W 37th Ave, Hobart, IN 46342 (Lake County, northwest Indiana). Phone 219-945-3136. It sells used sedans, SUVs, trucks and minivans, buys and takes trade-ins on vehicles, and helps customers with limited or damaged credit find financing. Prices exclude taxes and fees and may change without notice; approval and terms depend on the customer's income, credit and the vehicle.
+
+## Key pages
+
+- [Inventory](https://abdallahbatah.github.io/driveaway-auto-finance/inventory/): All used vehicles currently for sale, with filters and a payment estimate
+- [Financing](https://abdallahbatah.github.io/driveaway-auto-finance/financing/): Quick application and payment calculator
+- [Sell or trade](https://abdallahbatah.github.io/driveaway-auto-finance/sell/): How selling or trading in a vehicle works
+- [Car finder](https://abdallahbatah.github.io/driveaway-auto-finance/finder/): Describe the car you want and we search for it
+- [Visit us](https://abdallahbatah.github.io/driveaway-auto-finance/visit/): Address, phone, what to bring
+- [Reviews](https://abdallahbatah.github.io/driveaway-auto-finance/reviews/): Highlights from customer reviews
+
+## Vehicles in stock (37)
+
+- [2020 Chevrolet Colorado 4WD Crew Cab Work Truck](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2020-chevrolet-colorado-4wd-crew-cab-work-truck-10016/): $19,995, 106,885 miles, White, Truck. Stock 10016.
+- [2021 Chevrolet Malibu LT](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2021-chevrolet-malibu-lt-10274/): $15,995, 66,881 miles, Black, Sedan. Stock 10274.
+- [2023 Chevrolet Malibu 2LT](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2023-chevrolet-malibu-2lt-10393/): $18,995, 94,807 miles, Silver, Sedan. Stock 10393.
+- [2023 Chevrolet Malibu 1LT](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2023-chevrolet-malibu-1lt-10004/): $13,995, 104,836 miles, Blue, Sedan. Stock 10004.
+- [2019 Chevrolet Silverado 1500 LT Crew Cab 4WD](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2019-chevrolet-silverado-1500-lt-crew-cab-4wd-10337/): $19,995, 167,240 miles, Blue, Truck. Stock 10337.
+- [2019 Dodge Journey SE AWD](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2019-dodge-journey-se-awd-10347/): $11,995, 84,936 miles, White, SUV. Stock 10347.
+- [2022 Ford Edge SEL AWD](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2022-ford-edge-sel-awd-10351/): $17,995, 94,663 miles, Silver, SUV. Stock 10351.
+- [2020 Ford Escape SE](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2020-ford-escape-se-10395/): $13,995, 46,667 miles, Gray, SUV. Stock 10395.
+- [2022 Ford Escape SE Hybrid](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2022-ford-escape-se-hybrid-10373/): $13,995, 112,352 miles, Gray, SUV. Stock 10373.
+- [2022 Ford Explorer Limited 4WD](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2022-ford-explorer-limited-4wd-10282/): $30,995, 21,560 miles, Black, SUV. Stock 10282.
+- [2020 Ford Fusion SE](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2020-ford-fusion-se-10014/): $14,995, 52,071 miles, Black, Sedan. Stock 10014.
+- [2019 Ford Fusion Hybrid SE](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2019-ford-fusion-hybrid-se-10349/): $13,995, 36,031 miles, Blue, Sedan. Stock 10349.
+- [2024 Ford Edge SEL AWD](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2024-ford-edge-sel-awd-10147/): $23,995, 54,041 miles, Black, SUV. Stock 10147.
+- [2019 Hyundai Elantra SEL](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2019-hyundai-elantra-sel-10023/): $11,995, 88,407 miles, Black, Sedan. Stock 10023.
+- [2024 Hyundai Elantra Limited](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2024-hyundai-elantra-limited-10297/): $20,995, 58,611 miles, Gray, Sedan. Stock 10297.
+- [2015 Hyundai Genesis V6 3.8L AWD](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2015-hyundai-genesis-v6-3-8l-awd-10174/): $12,995, 90,604 miles, Blue, Sedan. Stock 10174.
+- [2011 Hyundai Sonata GLS](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2011-hyundai-sonata-gls-10322/): $6,995, 109,261 miles, Gray, Sedan. Stock 10322.
+- [2020 Hyundai Sonata SEL 2.5L](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2020-hyundai-sonata-sel-2-5l-10156/): $16,995, 70,764 miles, Black, Sedan. Stock 10156.
+- [2021 Hyundai Sonata SEL 2.5L](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2021-hyundai-sonata-sel-2-5l-10350/): $13,995, 97,255 miles, White, Sedan. Stock 10350.
+- [2021 Hyundai Tucson Ultimate AWD](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2021-hyundai-tucson-ultimate-awd-10280/): $19,995, 67,027 miles, Gray, SUV. Stock 10280.
+- [2020 Chrysler Pacifica Touring L](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2020-chrysler-pacifica-touring-l-10418/): call for price, 109,201 miles, White, Van-Minivan. Stock 10418.
+- [2020 Dodge Durango GT AWD](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2020-dodge-durango-gt-awd-10415/): call for price, 94,457 miles, Gray, SUV. Stock 10415.
+- [2019 Chevrolet Impala Premier](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2019-chevrolet-impala-premier-10420/): call for price, 113,263 miles, Black, Sedan. Stock 10420.
+- [2024 Chevrolet Malibu 1LT](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2024-chevrolet-malibu-1lt-10413/): call for price, 51,460 miles, Red, Sedan. Stock 10413.
+- [2018 Ford Explorer AWD](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2018-ford-explorer-awd-10386/): call for price, 113,235 miles, Black, SUV. Stock 10386.
+- [2019 Jeep Compass High Altitude 4x4](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2019-jeep-compass-high-altitude-4x4-10263/): $18,995, 53,322 miles, Silver, SUV, 4WD, Automatic, 2.4L. Stock 10263.
+- [2021 Jeep Compass 80th Anniversary 4x4](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2021-jeep-compass-80th-anniversary-4x4-10249/): $13,995, 99,573 miles, White, SUV, 4WD, Automatic, 2.4L. Stock 10249.
+- [2021 Jeep Compass Sport 4x4](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2021-jeep-compass-sport-4x4-10417/): call for price, 74,067 miles, Silver, SUV, 4WD, Automatic, 2.4L. Stock 10417.
+- [2022 Jeep Compass Latitude 4x4](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2022-jeep-compass-latitude-4x4-10339/): $17,995, 65,028 miles, Silver, SUV, 4WD, Automatic, 2.4L. Stock 10339.
+- [2023 Jeep Compass Limited 4x4](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2023-jeep-compass-limited-4x4-10326/): $24,995, 37,876 miles, Silver, SUV, 4WD, Automatic, 2.0L. Stock 10326.
+- [2018 Jeep Grand Cherokee Altitude 4x4](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2018-jeep-grand-cherokee-altitude-4x4-10398/): $13,995, 93,757 miles, Gray, SUV, 4WD, Automatic, 3.6L. Stock 10398.
+- [2023 Jeep Grand Cherokee Limited 4x4](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2023-jeep-grand-cherokee-limited-4x4-10389/): $28,995, 48,964 miles, Black, SUV, 4WD, Automatic, 3.6L. Stock 10389.
+- [2023 Jeep Grand Cherokee L Laredo 4x4](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2023-jeep-grand-cherokee-l-laredo-4x4-10405/): call for price, 78,421 miles, White, SUV, 4WD, Automatic, 3.6L. Stock 10405.
+- [2021 Jeep Renegade Jeepster 4x4](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2021-jeep-renegade-jeepster-4x4-10401/): $11,995, 96,403 miles, Black, SUV, 4WD, Automatic, 2.4L. Stock 10401.
+- [2019 Kia Optima LX Auto](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2019-kia-optima-lx-auto-10348/): $9,995, 90,758 miles, Gray, Sedan, FWD, Automatic, 2.4L. Stock 10348.
+- [2014 Kia Sorento 2WD 4dr V6 LX](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2014-kia-sorento-2wd-4dr-v6-lx-10421/): call for price, 99,970 miles, Silver, SUV, FWD, Automatic, 3.3L. Stock 10421.
+- [2019 Kia Sorento LX AWD](https://abdallahbatah.github.io/driveaway-auto-finance/cars/2019-kia-sorento-lx-awd-10414/): call for price, 105,086 miles, White, SUV, AWD, Automatic, 2.4L. Stock 10414.
+
+## Optional
+
+- [Full inventory details](https://abdallahbatah.github.io/driveaway-auto-finance/llms-full.txt)
+- [Sitemap](https://abdallahbatah.github.io/driveaway-auto-finance/sitemap.xml)
+- [Privacy policy](https://abdallahbatah.github.io/driveaway-auto-finance/privacy/)
+- [Terms of service](https://abdallahbatah.github.io/driveaway-auto-finance/terms/)

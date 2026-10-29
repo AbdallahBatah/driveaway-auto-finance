@@ -35,6 +35,7 @@ Output in `docs/` (publish with GitHub Pages: Settings > Pages > Deploy from bra
 - `/`, `/inventory/`, `/financing/`, `/sell/`, `/finder/`, `/visit/`, `/reviews/`, `/privacy/`, `/terms/`
 - `/cars/<year-make-model-trim-stock>/`: one page per vehicle with its own URL
 - `sitemap.xml` (with vehicle images), `robots.txt`, `404.html`
+- `llms.txt` (short guide to the business and every vehicle for AI assistants) and `llms-full.txt` (full inventory details)
 
 Each page has a unique title and description, canonical URL, Open Graph and Twitter tags, and JSON-LD: `AutoDealer` and `WebSite` on every page, `BreadcrumbList` everywhere, `Car` with `Offer` on vehicle pages and `ItemList` on the inventory page.
 

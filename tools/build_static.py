@@ -78,7 +78,7 @@ with sync_playwright() as pw:
     errs = []
     pg.on("pageerror", lambda e: errs.append(pg.url.split("#")[-1] + " " + str(e) + " " + (getattr(e, "stack", "") or "")[:250]))
     pg.goto(URL + "#home"); pg.wait_for_timeout(500)
-    cars = pg.evaluate("AV().map(v=>({slug:slug(v),stock:v[8],img:(v[9][0]||IMG[v[8]]||'')}))")
+    cars = pg.evaluate("AV().map(v=>({slug:slug(v),stock:v[8],img:(v[9][0]||IMG[v[8]]||''),title:vt(v),year:v[0],make:v[1],model:v[2],miles:v[4],price:v[5],body:v[6],color:v[7],drive:(v[13]||{}).drive||'',trans:(v[13]||{}).trans||'',engine:(v[13]||{}).engine||''}))")
     def snap(hashid, pid):
         pg.goto("about:blank"); pg.goto(URL + "#" + hashid); pg.wait_for_timeout(450)
         h = pg.content()
@@ -112,5 +112,30 @@ for c in cars:
     urls.append(url(f"/cars/{c['slug']}/", ex))
 (OUT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n' + "\n".join(urls) + "\n</urlset>\n")
 (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {BASE}/sitemap.xml\n")
+
+# 4. llms.txt (short index) and llms-full.txt (full inventory) for AI assistants
+def esc_md(t): return str(t).replace("[", "(").replace("]", ")")
+def line(c):
+    bits = [f"{c['miles']:,} miles", c["color"], c["body"]] + [x for x in (c["drive"], c["trans"], c["engine"]) if x]
+    price = f"${c['price']:,}" if c["price"] else "call for price"
+    return f"- [{esc_md(c['title'])}]({BASE}/cars/{c['slug']}/): {price}, " + ", ".join(bits) + f". Stock {c['stock']}."
+about = ("Driveaway Auto Finance is an independent used-car dealership with in-house financing at 2333 W 37th Ave, Hobart, IN 46342 (Lake County, northwest Indiana). "
+         "Phone 219-945-3136. It sells used sedans, SUVs, trucks and minivans, buys and takes trade-ins on vehicles, and helps customers with limited or damaged credit find financing. "
+         "Prices exclude taxes and fees and may change without notice; approval and terms depend on the customer's income, credit and the vehicle.")
+core = [("Inventory", "/inventory/", "All used vehicles currently for sale, with filters and a payment estimate"),
+        ("Financing", "/financing/", "Quick application and payment calculator"),
+        ("Sell or trade", "/sell/", "How selling or trading in a vehicle works"),
+        ("Car finder", "/finder/", "Describe the car you want and we search for it"),
+        ("Visit us", "/visit/", "Address, phone, what to bring"),
+        ("Reviews", "/reviews/", "Highlights from customer reviews")]
+head = f"# Driveaway Auto Finance\n\n> {about}\n\n"
+llms = head + "## Key pages\n\n" + "\n".join(f"- [{n}]({BASE}{p}): {d}" for n, p, d in core)
+llms += f"\n\n## Vehicles in stock ({len(cars)})\n\n" + "\n".join(line(c) for c in cars)
+llms += f"\n\n## Optional\n\n- [Full inventory details]({BASE}/llms-full.txt)\n- [Sitemap]({BASE}/sitemap.xml)\n- [Privacy policy]({BASE}/privacy/)\n- [Terms of service]({BASE}/terms/)\n"
+(OUT / "llms.txt").write_text(llms, encoding="utf-8")
+full = head + f"Last updated: {today}\n\n## Contact\n\nDriveaway Auto Finance, 2333 W 37th Ave, Hobart, IN 46342. Phone 219-945-3136. Map: https://www.google.com/maps/place/Driveaway+Auto+Finance/data=!4m2!3m1!1s0x0:0x4d325bdfe1317fba\n\n## Inventory\n\n"
+for c in cars:
+    full += f"### {c['title']}\n- URL: {BASE}/cars/{c['slug']}/\n- Price: {'$' + format(c['price'], ',') if c['price'] else 'Call for price'}\n- Mileage: {c['miles']:,} miles\n- Body style: {c['body']}\n- Exterior color: {c['color']}\n" + "".join(f"- {k}: {c[v]}\n" for k, v in (("Drive", "drive"), ("Transmission", "trans"), ("Engine", "engine")) if c[v]) + f"- Stock number: {c['stock']}\n- Condition: Used\n\n"
+(OUT / "llms-full.txt").write_text(full, encoding="utf-8")
 shutil.rmtree(TMP)
 print(f"{n} pages + 404 written to {OUT.relative_to(R)}/ for {BASE}")
