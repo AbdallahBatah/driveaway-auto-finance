@@ -153,3 +153,13 @@ body.adm header,body.adm footer,body.adm #cb{display:none}
 .hpw{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}.ts{margin:10px 0}
 body[data-role=manager] #tmb,body[data-role=sales] #tmb{display:none}
 .asd a[hidden]{display:none}
+/* blog */
+.bg{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}.bc{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;color:var(--ink);text-decoration:none;transition:.3s}.bc:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(0,0,0,.35)}
+.bi{display:block;aspect-ratio:16/10;background:center/cover #2a241d}.bb{display:flex;flex-direction:column;gap:8px;padding:22px 22px 26px}.bb small{color:var(--cu);font-weight:500;letter-spacing:.06em;text-transform:uppercase;font-size:12px}.bb b{font:500 23px/1.2 "Cormorant Garamond",Georgia,serif}.bb span:last-child{color:var(--mut);font-size:15px}
+.bcats{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.art{padding-top:34px;padding-bottom:70px;max-width:820px}.art .ahd{margin-bottom:26px}.ak{color:var(--cu);font-weight:500;letter-spacing:.07em;text-transform:uppercase;font-size:13px}.art h1{font-size:clamp(34px,5vw,58px);line-height:1.08;margin:10px 0 14px}.al{font-size:20px;color:var(--mut);margin:0 0 12px}.amt{font-size:14px;color:var(--mut);margin:0}
+.ah{aspect-ratio:16/8;border-radius:var(--r);background:center/cover #2a241d;margin:8px 0 34px}
+.ab p,.ab li{font-size:18px;line-height:1.75}.ab h2{font-size:clamp(26px,3.2vw,36px);margin:42px 0 10px}.ab h3{font-size:22px;margin:26px 0 6px}.ab ul,.ab ol{padding-left:22px;margin:12px 0 18px}.ab li{margin:6px 0}.ab a{color:var(--cu);text-decoration:underline;text-underline-offset:3px}.ab blockquote{margin:22px 0;padding:6px 0 6px 20px;border-left:3px solid var(--gold);color:var(--mut);font-style:italic}
+.acta{margin:48px 0 0;padding:32px;border:1px solid var(--line);border-radius:var(--r);background:var(--card)}.acta h2{margin-top:0}.ab .btn{color:var(--bg);text-decoration:none}.ab .btn.o{color:var(--ink)}.ab .btn:hover{color:#fff}.ab .btn.o:hover{color:var(--bg)}
+.arel{margin-top:60px}.arel h2{font-size:32px;margin-bottom:18px}.arel .bg{grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.atw{overflow-x:auto;margin:20px 0}.ab table{border-collapse:collapse;width:100%;font-size:16px}.ab th,.ab td{border-bottom:1px solid var(--line);padding:10px 12px;text-align:left}.ab th{font-weight:500;color:var(--mut)}

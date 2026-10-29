@@ -36,6 +36,17 @@ class Client {
   r = await anon.req('GET', '/sitemap.xml'); ck(r.data.includes('/cars/2020-chevrolet-colorado') && !r.data.includes('/admin'), 'sitemap lists vehicles, not admin');
   r = await anon.req('GET', '/robots.txt'); ck(/Disallow: \/admin\//.test(r.data) && /Sitemap: https:\/\/example.test/.test(r.data), 'robots.txt blocks admin');
   r = await anon.req('GET', '/llms.txt'); ck(/^# Driveaway Auto Finance/.test(r.data) && r.data.includes('Vehicles in stock'), 'llms.txt is generated');
+
+  console.log('blog');
+  r = await anon.req('GET', '/blog/'); ck(r.status === 200 && /<title>Used Car Tips and Guides/.test(r.data) && (r.data.match(/class="bc"/g) || []).length === 20, 'blog index lists 20 articles');
+  const art = r.data.match(/href="(\/blog\/[a-z0-9-]+\/)"/)[1];
+  r = await anon.req('GET', art); ck(r.status === 200 && /<h1>/.test(r.data) && /"@type":"BlogPosting"/.test(r.data) && /rel="canonical" href="[^"]+\/blog\//.test(r.data), 'article renders with BlogPosting JSON-LD and canonical');
+  ck(/"@type":"FAQPage"/.test(r.data) && /data-page="blog\//.test(r.data), 'article has FAQ schema and its own page id');
+  r = await anon.req('GET', '/blog/does-not-exist/'); ck(r.status === 404 && /noindex/.test(r.data), 'unknown article is a 404 noindex');
+  r = await anon.req('GET', '/sitemap.xml'); ck((String(r.data).match(/\/blog\/[a-z0-9-]+\//g) || []).length >= 20 && String(r.data).includes('/blog/</loc>'), 'sitemap lists the blog index and all 20 articles');
+  r = await anon.req('GET', '/llms.txt'); ck((r.data.match(/\/blog\/[a-z0-9-]+\//g) || []).length >= 20, 'llms.txt links every article');
+  r = await anon.req('GET', '/llms-full.txt'); ck(/## Articles/.test(r.data) && r.data.includes('Used Car Financing With Bad Credit'), 'llms-full.txt carries article text');
+  r = await anon.req('GET', '/'); ck(/From the blog/.test(r.data), 'home links to latest articles');
   r = await anon.req('GET', '/admin/'); ck(r.status === 200 && /noindex/.test(r.data) && r.headers.get('cache-control') === 'no-store', 'admin shell is noindex and not cached');
   r = await anon.req('GET', '/assets/../server/config.js'); ck(r.status === 404, 'path traversal blocked');
   r = await anon.req('GET', '/assets/%2e%2e/server/config.js'); ck(r.status === 404, 'encoded traversal blocked');

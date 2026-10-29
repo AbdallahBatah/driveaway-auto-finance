@@ -3,8 +3,8 @@
 const { esc } = require('./util');
 const SITE = { name: 'Driveaway Auto Finance', phone: '219-945-3136', tel: '+12199453136', street: '2333 W 37th Ave', city: 'Hobart', region: 'IN', zip: '46342',
   map: 'https://www.google.com/maps/place/Driveaway+Auto+Finance/data=!4m2!3m1!1s0x0:0x4d325bdfe1317fba' };
-const PATHS = { home: '/', inventory: '/inventory/', financing: '/financing/', sell: '/sell/', finder: '/finder/', visit: '/visit/', reviews: '/reviews/', privacy: '/privacy/', terms: '/terms/' };
-const NAMES = { inventory: 'Inventory', financing: 'Financing', sell: 'Sell or trade', finder: 'Car finder', visit: 'Visit us', reviews: 'Reviews', privacy: 'Privacy policy', terms: 'Terms of service' };
+const PATHS = { home: '/', inventory: '/inventory/', financing: '/financing/', sell: '/sell/', finder: '/finder/', visit: '/visit/', reviews: '/reviews/', privacy: '/privacy/', terms: '/terms/', blog: '/blog/' };
+const NAMES = { inventory: 'Inventory', financing: 'Financing', sell: 'Sell or trade', finder: 'Car finder', visit: 'Visit us', reviews: 'Reviews', privacy: 'Privacy policy', terms: 'Terms of service', blog: 'Blog' };
 const META = {
   home: ['Used Cars in Hobart, IN | Driveaway Auto Finance', 'Used cars, trucks and SUVs in Hobart, Indiana, with financing built around your budget. Browse the lot online, compare up to three vehicles and apply in minutes.'],
   inventory: ['Used Cars for Sale in Hobart, IN | Driveaway Auto Finance', 'Browse used sedans, SUVs, trucks and minivans on our Hobart, Indiana lot. Filter by style, price and brand, compare up to three cars and see an estimated monthly payment.'],
@@ -15,6 +15,7 @@ const META = {
   reviews: ['Customer Reviews | Driveaway Auto Finance, Hobart, IN', 'Read what recent customers say about buying a used car at Driveaway Auto Finance in Hobart, Indiana, from fast approvals to friendly, patient staff.'],
   privacy: ['Privacy Policy | Driveaway Auto Finance', 'How Driveaway Auto Finance collects, uses and protects the information you share through this website.'],
   terms: ['Terms of Service | Driveaway Auto Finance', 'The terms that apply to using the Driveaway Auto Finance website, vehicle listings and online forms.'],
+  blog: ['Used Car Tips and Guides | Driveaway Auto Finance, Hobart, IN', 'Practical advice on buying, financing and owning a used car in Northwest Indiana, from the team at Driveaway Auto Finance in Hobart.'],
   admin: ['Staff dashboard | Driveaway Auto Finance', ''], login: ['Staff sign in | Driveaway Auto Finance', ''],
   notfound: ['Vehicle not found | Driveaway Auto Finance', 'This vehicle is no longer listed. Browse our current used cars in Hobart, Indiana.']
 };
@@ -40,8 +41,9 @@ function graph(base, id, v, cars, imgFor) {
       areaServed: ['Hobart', 'Merrillville', 'Portage', 'Crown Point', 'Gary'].map(n => ({ '@type': 'City', name: n })) },
     { '@type': 'WebSite', '@id': base + '/#website', url: base + '/', name: SITE.name, inLanguage: 'en-US', publisher: { '@id': base + '/#dealer' } }] };
   const crumbs = [['Home', base + '/']];
+  if (id === 'blog') crumbs.push(['Blog', base + '/blog/']);
   if (id === 'inventory' || v) crumbs.push(['Inventory', base + PATHS.inventory]);
-  if (v) crumbs.push([vt(v), `${base}/cars/${slug(v)}/`]); else if (NAMES[id] && id !== 'inventory') crumbs.push([NAMES[id], base + PATHS[id]]);
+  if (v) crumbs.push([vt(v), `${base}/cars/${slug(v)}/`]); else if (NAMES[id] && id !== 'inventory' && id !== 'blog') crumbs.push([NAMES[id], base + PATHS[id]]);
   const page = [{ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c[0], item: c[1] })) }];
   if (v) {
     const url = `${base}/cars/${slug(v)}/`, im = photos(v).map(abs).concat(photos(v).length ? [] : [abs(imgFor(v))]).filter(Boolean);
@@ -54,15 +56,17 @@ function graph(base, id, v, cars, imgFor) {
   return [dealer, page];
 }
 const ldTag = (id, o) => `<script type="application/ld+json" id="${id}">${JSON.stringify(o).replace(/</g, '\\u003c')}</script>`;
-function headTags({ base, id, v, cars, noindex, notFound, imgFor }) {
+function headTags({ base, id, v, cars, noindex, notFound, imgFor, post }) {
   let m = META[id] || META.home, type = 'website', robots = 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1';
   if (v) { m = carMeta(v); type = 'product'; }
+  if (post) { m = [(post.title + ' | ' + SITE.name).length <= 66 ? post.title + ' | ' + SITE.name : post.title, post.description]; type = 'article'; }
   if (notFound) { m = META.notfound; robots = 'noindex,follow'; }
   if (noindex) robots = 'noindex,nofollow';
-  const canon = notFound || noindex ? '' : base + (v ? `/cars/${slug(v)}/` : PATHS[id] || '/');
-  const img = base + (v ? (photos(v)[0] || imgFor(v)) : '/assets/img/slider/slide-1.webp');
-  const [site, page] = noindex || notFound ? [null, null] : graph(base, id, v, cars, imgFor);
-  const alt = v ? vt(v) + ' for sale in Hobart, IN' : SITE.name + ' used car dealership in Hobart, IN';
+  const canon = notFound || noindex ? '' : base + (post ? `/blog/${post.slug}/` : v ? `/cars/${slug(v)}/` : PATHS[id] || '/');
+  const img = base + (post ? post.img : v ? (photos(v)[0] || imgFor(v)) : '/assets/img/slider/slide-1.webp');
+  let [site, page] = noindex || notFound ? [null, null] : graph(base, id, v, cars, imgFor);
+  if (post && page) page = post.ld;
+  const alt = post ? post.title : v ? vt(v) + ' for sale in Hobart, IN' : SITE.name + ' used car dealership in Hobart, IN';
   return [`<title>${esc(m[0])}</title>`, `<meta name="description" content="${esc(m[1])}">`, `<meta name="robots" content="${robots}">`,
     canon ? `<link rel="canonical" href="${esc(canon)}">` : '<link rel="canonical">',
     `<meta property="og:site_name" content="${SITE.name}"><meta property="og:locale" content="en_US"><meta property="og:type" content="${type}">`,

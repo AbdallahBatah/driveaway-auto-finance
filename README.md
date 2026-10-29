@@ -43,6 +43,10 @@ On first start the 37 current vehicles are seeded automatically.
 | manager | Vehicles, sales/CRM, leads, reports |
 | sales | Only their own deals in the CRM (enforced on the server) |
 
+## Blog
+
+Articles are Markdown files in `data/articles/` (front matter: `title`, `slug`, `description`, `category`, `date`, `image` = a vehicle stock number, `related`). The server renders `/blog/` and `/blog/<slug>/` with canonical URLs, Open Graph, BlogPosting + FAQ + breadcrumb JSON-LD, and adds every article to `sitemap.xml`, `llms.txt` and `llms-full.txt` automatically. A `date` in the future keeps an article hidden until that day, so you can schedule posts. Links inside articles may only point to site paths (`/inventory/`).
+
 ## Data and backups
 
 - Inventory, deals and leads are documents in one `docs` table; photos are stored in `blobs`.
