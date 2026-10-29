@@ -4,7 +4,9 @@
   "private": true,
   "description": "Driveaway Auto Finance: website, admin, CRM, users and database",
   "main": "server/index.js",
-  "engines": { "node": ">=22.5" },
+  "engines": {
+    "node": ">=22.5"
+  },
   "scripts": {
     "start": "node --no-warnings server/index.js",
     "test": "node --no-warnings tests/api.test.js",
@@ -12,7 +14,7 @@
     "create-owner": "node --no-warnings scripts/create-owner.js"
   },
   "dependencies": {
-    "pg": "^8.13.1"
+    "pg": "^8.23.1"
   },
   "optionalDependencies": {
     "sharp": "^0.33.5"
