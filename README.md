@@ -9,6 +9,10 @@ Single-file website for Driveaway Auto Finance, a used-car dealership at 2333 W 
 
 ## Project structure
 ```
+tools/build_static.py   pre-renders crawlable pages into docs/
+site.config.json      base_url, out_dir, custom_domain
+data/                 vehicles.json and photos/ exported from the admin (optional)
+docs/                 generated static site (publish this folder)
 index.html            built single file (identical to the published artifact)
 build.py              python3 build.py  -> inlines src/ into index.html
 src/index.html        page markup (all pages + admin + dialogs)
@@ -19,6 +23,24 @@ originals/            the original files you uploaded (photos and the source sit
 ```
 Edit files in `src/`, run `python3 build.py`, and publish the resulting `index.html`.
 To preview `src/` directly: `cd src && python3 -m http.server` (admin and CRM still need the claude.ai runtime).
+
+## SEO: static pages, metadata and sitemap
+Search engines cannot index the `#` routes of the single-file site (or a private artifact), so the repo includes a generator that pre-renders real, crawlable pages:
+
+```
+pip install playwright && playwright install chromium
+python3 tools/build_static.py        # writes docs/
+```
+Output in `docs/` (publish with GitHub Pages: Settings > Pages > Deploy from branch > `main` / `docs`):
+- `/`, `/inventory/`, `/financing/`, `/sell/`, `/finder/`, `/visit/`, `/reviews/`, `/privacy/`, `/terms/`
+- `/cars/<year-make-model-trim-stock>/`: one page per vehicle with its own URL
+- `sitemap.xml` (with vehicle images), `robots.txt`, `404.html`
+
+Each page has a unique title and description, canonical URL, Open Graph and Twitter tags, and JSON-LD: `AutoDealer` and `WebSite` on every page, `BreadcrumbList` everywhere, `Car` with `Offer` on vehicle pages and `ItemList` on the inventory page.
+
+**Before going live:** set `base_url` in `site.config.json` to the real address (and `custom_domain` if you use one), then rebuild. Canonical URLs, sitemap and structured data all follow it.
+
+**When inventory changes:** in Admin > Vehicles click *Export site data (JSON)*, save the file as `data/vehicles.json`, put each new car's photo in `data/photos/<stock>.webp` (or .jpg/.png), run `python3 tools/build_static.py` and push. Cars that were sold drop out of the sitemap on the next build.
 
 ## Important: how it runs
 The admin, live inventory, lead capture and CRM use the `window.claude` runtime of claude.ai artifacts (`db`, `user`, `assets`, `sample`, `downloads`). Opened elsewhere (for example GitHub Pages) the public pages work with the 37 built-in vehicles, but admin, CRM and saving of leads do not.

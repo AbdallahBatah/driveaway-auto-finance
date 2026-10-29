@@ -143,3 +143,10 @@ body.adm header,body.adm footer,body.adm #cb{display:none}
 .tk{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}.tk input{width:auto;flex:none}.tk span{flex:1}.tk .lk{margin:0}.tk.dn span{text-decoration:line-through;opacity:.55}
 #dwd{max-width:min(1040px,95vw)}.dwh{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;padding-right:40px}.dh{font-size:26px;margin:22px 0 10px}.btn.sm{padding:6px 14px;font-size:13px}
 .tl>div{border-left:2px solid var(--line);padding:2px 0 10px 14px}.tl>div.nn{border-color:var(--cu)}.tl p{margin:2px 0 0}.tl small{color:var(--mut)}
+
+.cp{padding:34px 0 60px}.crumb{font-size:14px;color:var(--mut);margin-bottom:20px}.crumb a{color:var(--mut)}.cp-g{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:start}.cp-m{aspect-ratio:4/3;border-radius:20px;background:#17130f center/cover;position:relative;display:flex;align-items:flex-end;padding:20px;color:#ffffff30;font:400 160px/.8 "Cormorant Garamond",serif}.cp-s{position:absolute;top:16px;left:16px;font:500 13px Jost;background:var(--cu);color:#fff;border-radius:99px;padding:6px 14px}
+.cp-t{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}.cp-t i{width:84px;height:62px;border-radius:10px;background:center/cover;cursor:pointer;border:1px solid var(--line)}
+.cp h1{font-size:clamp(32px,4vw,52px);margin-bottom:8px}.cp-b{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 22px}.cp-d{display:grid;grid-template-columns:auto 1fr;gap:8px 24px;margin:0;font-size:16px}.cp-d dt{color:var(--mut)}.cp-d dd{margin:0;font-weight:500}
+.cp-tx{max-width:760px;margin:46px 0 10px}.cp-tx h2{font-size:30px;margin:26px 0 8px}.cp-tx p{font-size:17px}.cp-h{font-size:34px;margin:40px 0 18px}.cp-nf{padding:60px 0}.car h3 a.cl{color:inherit;text-decoration:none}
+@media(max-width:900px){.cp-g{grid-template-columns:1fr;gap:22px}}
+.cp-b .cmp{position:static;background:none;color:var(--ink);border:1px solid var(--ink);padding:14px 26px;font:500 16px Jost}.cp-b .cmp.on{background:var(--cu);color:#fff;border-color:var(--cu)}
